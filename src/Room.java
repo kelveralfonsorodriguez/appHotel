@@ -1,24 +1,42 @@
 public class Room {
-    int number;
-    int price;
-    boolean empty;
+    private int number;
+    private int price;
+    private boolean empty;
+
     public Room(int number, int price, boolean empty) {
         this.number = number;
         this.price = price;
         this.empty = empty;
     }
-    public void getPrice() {
-        IO.println("the price of the room is " + price);
+
+    public int getPrice() {
+        return price;
     }
-    public void setPrice(int price1) {
-        int price = price1;
-        IO.println("the new  price of the room is " + price);
+
+    public void setPrice(int price) {
+        this.price = price;
     }
-    public void getNumber() {
-        IO.println("the room number is: " + price);
+
+    public int getNumber() {
+        return number;
     }
-    public void setNumber(int num1) {
-        int number = num1;
-        IO.println("the new room number is: " + number);
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public boolean isEmpty() {
+        return empty;
+    }
+
+    public void setEmpty(boolean empty) {
+        this.empty = empty;
+    }
+
+    @Override
+    public String toString() {
+        return "Habitación #" + number +
+                " | Precio: " + price +
+                " | Disponible: " + (empty ? "Sí" : "No");
     }
 }

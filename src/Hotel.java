@@ -1,43 +1,51 @@
 import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class Hotel {
-    Gui gui = new Gui();
-    Room room1 = new Room(1,1,true);
 
-    Boolean running = true;
-    Hotel() {
-        this.rooms = new ArrayList();
-    }
+    private Gui gui = new Gui();
+    private Room room1 = new Room(1, 1, true);
+    private boolean running = true;
     private ArrayList<Room> rooms;
-    public void addRoom(Room room){
+
+    Hotel() {
+        this.rooms = new ArrayList<>();
+    }
+
+    public void addRoom(Room room) {
         rooms.add(room);
     }
-    public void removeRoom(Room room){
-        rooms.remove(room);
 
+    public void removeRoom(Room room) {
+        rooms.remove(room);
     }
-    public ArrayList<Room> getRooms(){
+
+    public ArrayList<Room> getRooms() {
         return rooms;
     }
-    public Object showRooms(){
 
-        if(rooms.isEmpty()){
+    public void showRooms() {
+        if (rooms.isEmpty()) {
             IO.println("No hay habitaciones.");
-            return null;
+            return;
         }
-
-        for(Room room : rooms){
+        for (Room room : rooms) {
             IO.println(room.toString());
-            IO.println("test");
         }
-        return null;
     }
-    public void start(){
+
+    public void start() {
         int option = Gui.gui();
         addRoom(room1);
-        IO.println(showRooms());
-        IO.println("()");
-       /* switch(option){
+        showRooms();
+    }
+}
+
+
+
+
+
+ /* switch(option){
             case 1:
                 IO.println("pepe");
                 break;
@@ -57,9 +65,3 @@ public class Hotel {
 
         }
 */
-    }
-
-
-
-
-}
