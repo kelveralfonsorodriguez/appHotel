@@ -20,9 +20,6 @@ public class Hotel {
         rooms.remove(room);
     }
 
-    public ArrayList<Room> getRooms() {
-        return rooms;
-    }
 
     public void showRooms() {
         if (rooms.isEmpty()) {
@@ -37,31 +34,31 @@ public class Hotel {
     public void start() {
         int option = Gui.gui();
         addRoom(room1);
-        showRooms();
-    }
-}
-
-
-
-
-
- /* switch(option){
+        switch(option){
             case 1:
                 IO.println("pepe");
                 break;
-                case 2:
-                   IO.println(showRooms());
-                    break;
-                    case 3:
-                        break;
-                        case 4:
-                            break;
-                            case 5:
-                                break;
-                                case 6:
-                                    break;
-                                    case 7:
-                                        break;
+            case 2:
+                showRooms();
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+    }
+}}
+
+
+
+
+
+ /*
 
         }
 */
